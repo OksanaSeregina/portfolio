@@ -99,6 +99,7 @@ body {
   background-position: center -90px;
   background-repeat: no-repeat;
   height: 820px;
+  margin-bottom: 100px;
 }
 
 .main .hero .content-hero {
@@ -145,5 +146,104 @@ body {
 
 .main .hero .content-hero .btn-hero:hover {
   color: #ffffff;
+}
+
+.main .skills .title {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  width: 70vh;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.main .skills .title span {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--font2);
+  line-height: 80px;
+  text-align: center;
+  color: var(--color-gold);
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.main .skills .title span:before,
+.main .skills .title span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-top: 2px solid var(--color-gold);
+  top: 50%;
+}
+
+.main .skills .title span:before {
+  margin-left: -103%;
+}
+
+.main .skills .title span:after {
+  margin-left: 3%;
+}
+
+.main .skills .skills-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 102px;
+}
+
+.main .skills .skills-container .item-skills {
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 240px;
+  width: 320px;
+}
+
+.main .skills .skills-container .item-skills .title-skills {
+  margin-top: 100px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--font3);
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.main .skills .skills-container .item-skills .description-skills {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  margin: 0 20px 8px 20px;
+}
+
+.main .skills .skills-container .item-skills:nth-child(1) {
+  background-image: url("../assets/svg/camera.svg");
+  background-size: 62px 50px;
+}
+
+.main .skills .skills-container .item-skills:nth-child(2) {
+  background-image: url("../assets/svg/video.svg");
+  background-size: 60px 50px;
+}
+
+.main .skills .skills-container .item-skills:nth-child(3) {
+  background-image: url("../assets/svg/image.svg");
+  background-size: 66px 50px;
+}
+
+.main .skills .skills-container .item-skills:nth-child(4) {
+  background-image: url("../assets/svg/mic.svg");
+  background-size: 32px 50px;
 }
 /*# sourceMappingURL=style.css.map */
