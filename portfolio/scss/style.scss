@@ -26,6 +26,11 @@ body {
   --font2: 40px;
   --font3: 20px;
 }
+@mixin images {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
 @mixin btn-gold {
   border: 0;
   background-color: var(--color-gold);
@@ -36,14 +41,29 @@ body {
   font-size: var(--font3);
   line-height: 40px;
   text-align: center;
-  padding: 8px 73px 7px 73px;
+  width: 220px;
+  height: 55px;
+}
+@mixin btn-transparent {
+  border: 2px solid var(--color-gold);
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font3);
+  line-height: 40px;
+  text-align: center;
+  color: var(--color-gold);
+  width: 220px;
+  height: 55px;
 }
 
 @mixin title {
   position: relative;
   overflow: hidden;
   text-align: center;
-  width: 70vh;
+  width: 48.612%;
   margin: 0 auto;
   span {
     font-family: "Merriweather", serif;
@@ -96,7 +116,7 @@ body {
             color: #ffffff;
             text-decoration: none;
             margin-right: 30px;
-            transition: 0.3s;
+            transition: 1s;
           }
           .nav-link:hover {
             color: var(--color-gold);
@@ -154,7 +174,7 @@ body {
       }
       .btn-hero {
         @include btn-gold;
-        transition: 0.3s;
+        transition: 1s;
       }
       .btn-hero:hover {
         color: #ffffff;
@@ -212,6 +232,65 @@ body {
       .item-skills:nth-child(4) {
         background-image: url("../assets/svg/mic.svg");
         background-size: 32px 50px;
+      }
+    }
+  }
+  .portfolio {
+    .title {
+      @include title;
+      margin-bottom: 60px;
+    }
+    .group-btn {
+      display: flex;
+      gap: 5px;
+      justify-content: center;
+      margin-bottom: 60px;
+      .btn-portfolio-transp {
+        @include btn-transparent;
+        transition: 1s;
+      }
+      .btn-portfolio-gold {
+        @include btn-gold;
+        transition: 1s;
+      }
+      .btn-portfolio-transp:hover,
+      .btn-portfolio-gold:hover {
+        color: #ffffff;
+      }
+    }
+    .container-imgs {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-bottom: 100px;
+      .item-portfolio {
+        width: 450px;
+        height: 560px;
+        img {
+          @include images;
+        }
+      }
+    }
+  }
+  .video {
+    .title {
+      @include title;
+      margin-bottom: 60px;
+    }
+    .video-player {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 100px;
+      img {
+        @include images;
+      }
+      .btn-play {
+        background: transparent;
+        border: 0;
+        position: absolute;
+        cursor: pointer;
       }
     }
   }

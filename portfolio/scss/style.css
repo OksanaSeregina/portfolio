@@ -69,8 +69,8 @@ body {
   color: #ffffff;
   text-decoration: none;
   margin-right: 30px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .header .info-header .nav .nav-list .nav-item .nav-link:hover {
@@ -139,9 +139,10 @@ body {
   font-size: var(--font3);
   line-height: 40px;
   text-align: center;
-  padding: 8px 73px 7px 73px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  width: 220px;
+  height: 55px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .main .hero .content-hero .btn-hero:hover {
@@ -152,7 +153,7 @@ body {
   position: relative;
   overflow: hidden;
   text-align: center;
-  width: 70vh;
+  width: 48.612%;
   margin: 0 auto;
   margin-bottom: 60px;
 }
@@ -245,5 +246,180 @@ body {
 .main .skills .skills-container .item-skills:nth-child(4) {
   background-image: url("../assets/svg/mic.svg");
   background-size: 32px 50px;
+}
+
+.main .portfolio .title {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  width: 48.612%;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.main .portfolio .title span {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--font2);
+  line-height: 80px;
+  text-align: center;
+  color: var(--color-gold);
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.main .portfolio .title span:before,
+.main .portfolio .title span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-top: 2px solid var(--color-gold);
+  top: 50%;
+}
+
+.main .portfolio .title span:before {
+  margin-left: -103%;
+}
+
+.main .portfolio .title span:after {
+  margin-left: 3%;
+}
+
+.main .portfolio .group-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 60px;
+}
+
+.main .portfolio .group-btn .btn-portfolio-transp {
+  border: 2px solid var(--color-gold);
+  background-color: transparent;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font3);
+  line-height: 40px;
+  text-align: center;
+  color: var(--color-gold);
+  width: 220px;
+  height: 55px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.main .portfolio .group-btn .btn-portfolio-gold {
+  border: 0;
+  background-color: var(--color-gold);
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font3);
+  line-height: 40px;
+  text-align: center;
+  width: 220px;
+  height: 55px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.main .portfolio .group-btn .btn-portfolio-transp:hover,
+.main .portfolio .group-btn .btn-portfolio-gold:hover {
+  color: #ffffff;
+}
+
+.main .portfolio .container-imgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.main .portfolio .container-imgs .item-portfolio {
+  width: 450px;
+  height: 560px;
+}
+
+.main .portfolio .container-imgs .item-portfolio img {
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main .video .title {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  width: 48.612%;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.main .video .title span {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--font2);
+  line-height: 80px;
+  text-align: center;
+  color: var(--color-gold);
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.main .video .title span:before,
+.main .video .title span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-top: 2px solid var(--color-gold);
+  top: 50%;
+}
+
+.main .video .title span:before {
+  margin-left: -103%;
+}
+
+.main .video .title span:after {
+  margin-left: 3%;
+}
+
+.main .video .video-player {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 100px;
+}
+
+.main .video .video-player img {
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main .video .video-player .btn-play {
+  background: transparent;
+  border: 0;
+  position: absolute;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
