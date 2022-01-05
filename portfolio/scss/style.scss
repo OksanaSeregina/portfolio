@@ -294,4 +294,55 @@ body {
       }
     }
   }
+  .price {
+    .title {
+      @include title;
+      margin-bottom: 60px;
+    }
+    .cards-price {
+      display: flex;
+      gap: 25px;
+      color: #ffffff;
+      margin-bottom: 100px;
+      .item-price {
+        border: 3px solid var(--color-gold);
+        text-align: center;
+        padding: 40px;
+        width: 33%;
+        .title-card {
+          font-family: "Merriweather", serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 28px;
+          line-height: 56px;
+          margin: 0 0 20px 0;
+        }
+        .price-card {
+          font-family: "Merriweather", serif;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 48px;
+          color: var(--color-gold);
+          margin: 0 0 20px 0;
+        }
+        .description-card {
+          display: block;
+          font-family: "Inter", sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 36px;
+        }
+        .btn-price {
+          @include btn-gold;
+          transition: 1s;
+          margin-top: 40px;
+        }
+        .btn-price:hover {
+          color: #ffffff;
+        }
+      }
+    }
+  }
 }

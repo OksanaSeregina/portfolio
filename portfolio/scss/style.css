@@ -422,4 +422,107 @@ body {
   position: absolute;
   cursor: pointer;
 }
+
+.main .price .title {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  width: 48.612%;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.main .price .title span {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--font2);
+  line-height: 80px;
+  text-align: center;
+  color: var(--color-gold);
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.main .price .title span:before,
+.main .price .title span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-top: 2px solid var(--color-gold);
+  top: 50%;
+}
+
+.main .price .title span:before {
+  margin-left: -103%;
+}
+
+.main .price .title span:after {
+  margin-left: 3%;
+}
+
+.main .price .cards-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+  color: #ffffff;
+  margin-bottom: 100px;
+}
+
+.main .price .cards-price .item-price {
+  border: 3px solid var(--color-gold);
+  text-align: center;
+  padding: 40px;
+  width: 33%;
+}
+
+.main .price .cards-price .item-price .title-card {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 56px;
+  margin: 0 0 20px 0;
+}
+
+.main .price .cards-price .item-price .price-card {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 48px;
+  color: var(--color-gold);
+  margin: 0 0 20px 0;
+}
+
+.main .price .cards-price .item-price .description-card {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 36px;
+}
+
+.main .price .cards-price .item-price .btn-price {
+  border: 0;
+  background-color: var(--color-gold);
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font3);
+  line-height: 40px;
+  text-align: center;
+  width: 220px;
+  height: 55px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin-top: 40px;
+}
+
+.main .price .cards-price .item-price .btn-price:hover {
+  color: #ffffff;
+}
 /*# sourceMappingURL=style.css.map */
