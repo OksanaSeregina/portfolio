@@ -100,6 +100,18 @@ body {
   .info-header {
     display: flex;
     align-items: center;
+    .logo {
+      background-image: url("../assets/svg/logo\ 1.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 50px;
+      height: 50px;
+      transition: 1s;
+    }
+    .logo:hover {
+      filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+        brightness(92%) contrast(87%);
+    }
     .nav {
       margin-left: auto;
       .nav-list {
@@ -291,6 +303,16 @@ body {
         border: 0;
         position: absolute;
         cursor: pointer;
+        background-image: url("../assets/svg/Play_hover.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 130px;
+        height: 130px;
+        transition: 1s;
+      }
+      .btn-play:hover {
+        filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+          brightness(92%) contrast(87%);
       }
     }
   }
@@ -461,7 +483,57 @@ body {
       .item-social-list {
         margin-left: 20px;
         .link-social-list {
+          display: block;
+          background-size: contain;
+          background-repeat: no-repeat;
+          transition: 1s;
           text-decoration: none;
+          width: 32px;
+          height: 32px;
+        }
+      }
+      .item-social-list:nth-child(1) {
+        .link-social-list {
+          background-image: url("../assets/svg/inst.svg");
+        }
+      }
+      .item-social-list:nth-child(1) {
+        .link-social-list:hover {
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+            brightness(92%) contrast(87%);
+        }
+      }
+      .item-social-list:nth-child(2) {
+        .link-social-list {
+          background-image: url("../assets/svg/fb.svg");
+        }
+      }
+      .item-social-list:nth-child(2) {
+        .link-social-list:hover {
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+            brightness(92%) contrast(87%);
+        }
+      }
+      .item-social-list:nth-child(3) {
+        .link-social-list {
+          background-image: url("../assets/svg/tw.svg");
+        }
+      }
+      .item-social-list:nth-child(3) {
+        .link-social-list:hover {
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+            brightness(92%) contrast(87%);
+        }
+      }
+      .item-social-list:nth-child(4) {
+        .link-social-list {
+          background-image: url("../assets/svg/pinterest.svg");
+        }
+      }
+      .item-social-list:nth-child(4) {
+        .link-social-list:hover {
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg)
+            brightness(92%) contrast(87%);
         }
       }
     }

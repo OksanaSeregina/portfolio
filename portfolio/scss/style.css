@@ -48,6 +48,21 @@ body {
           align-items: center;
 }
 
+.header .info-header .logo {
+  background-image: url("../assets/svg/logo 1.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.header .info-header .logo:hover {
+  -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+
 .header .info-header .nav {
   margin-left: auto;
 }
@@ -421,6 +436,18 @@ body {
   border: 0;
   position: absolute;
   cursor: pointer;
+  background-image: url("../assets/svg/Play_hover.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 130px;
+  height: 130px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.main .video .video-player .btn-play:hover {
+  -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 
 .main .price .title {
@@ -729,6 +756,49 @@ body {
 }
 
 .footer .content-footer .social-list .item-social-list .link-social-list {
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transition: 1s;
+  transition: 1s;
   text-decoration: none;
+  width: 32px;
+  height: 32px;
+}
+
+.footer .content-footer .social-list .item-social-list:nth-child(1) .link-social-list {
+  background-image: url("../assets/svg/inst.svg");
+}
+
+.footer .content-footer .social-list .item-social-list:nth-child(1) .link-social-list:hover {
+  -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+
+.footer .content-footer .social-list .item-social-list:nth-child(2) .link-social-list {
+  background-image: url("../assets/svg/fb.svg");
+}
+
+.footer .content-footer .social-list .item-social-list:nth-child(2) .link-social-list:hover {
+  -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+
+.footer .content-footer .social-list .item-social-list:nth-child(3) .link-social-list {
+  background-image: url("../assets/svg/tw.svg");
+}
+
+.footer .content-footer .social-list .item-social-list:nth-child(3) .link-social-list:hover {
+  -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+
+.footer .content-footer .social-list .item-social-list:nth-child(4) .link-social-list {
+  background-image: url("../assets/svg/pinterest.svg");
+}
+
+.footer .content-footer .social-list .item-social-list:nth-child(4) .link-social-list:hover {
+  -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+          filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 /*# sourceMappingURL=style.css.map */
