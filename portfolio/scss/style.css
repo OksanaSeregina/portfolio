@@ -520,6 +520,7 @@ body {
   -webkit-transition: 1s;
   transition: 1s;
   margin-top: 40px;
+  width: 60.44%;
 }
 
 .main .price .cards-price .item-price .btn-price:hover {
@@ -700,8 +701,15 @@ body {
   font-size: 20px;
   line-height: 50px;
   color: #ffffff;
+  text-decoration: none;
   margin: 0;
   margin-left: 19px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.footer .content-footer .center-content-footer:hover {
+  color: var(--color-gold);
 }
 
 .footer .content-footer .social-list {

@@ -338,6 +338,7 @@ body {
           @include btn-gold;
           transition: 1s;
           margin-top: 40px;
+          width: 60.44%;
         }
         .btn-price:hover {
           color: #ffffff;
@@ -443,8 +444,13 @@ body {
       font-size: 20px;
       line-height: 50px;
       color: #ffffff;
+      text-decoration: none;
       margin: 0;
       margin-left: 19px;
+      transition: 1s;
+    }
+    .center-content-footer:hover {
+      color: var(--color-gold);
     }
     .social-list {
       display: flex;
