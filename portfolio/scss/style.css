@@ -525,4 +525,123 @@ body {
 .main .price .cards-price .item-price .btn-price:hover {
   color: #ffffff;
 }
+
+.main .contacts {
+  background: url("../assets/img/contacts-img.jpg");
+  background-position: center center;
+  height: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-right: 20px;
+}
+
+.main .contacts .content-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 450px;
+  height: 445px;
+  margin-top: 60px;
+}
+
+.main .contacts .content-contacts .title-contacts {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: var(--font2);
+  line-height: 80px;
+  color: var(--color-gold);
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.main .contacts .content-contacts .input-email,
+.main .contacts .content-contacts .input-tel {
+  height: 44px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--color-gold);
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.main .contacts .content-contacts .input-email::-webkit-input-placeholder,
+.main .contacts .content-contacts .input-tel::-webkit-input-placeholder,
+.main .contacts .content-contacts .textarea-message::-webkit-input-placeholder {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font3);
+  line-height: 40px;
+  color: var(--color-gold);
+}
+
+.main .contacts .content-contacts .input-email:-ms-input-placeholder,
+.main .contacts .content-contacts .input-tel:-ms-input-placeholder,
+.main .contacts .content-contacts .textarea-message:-ms-input-placeholder {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font3);
+  line-height: 40px;
+  color: var(--color-gold);
+}
+
+.main .contacts .content-contacts .input-email::-ms-input-placeholder,
+.main .contacts .content-contacts .input-tel::-ms-input-placeholder,
+.main .contacts .content-contacts .textarea-message::-ms-input-placeholder {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font3);
+  line-height: 40px;
+  color: var(--color-gold);
+}
+
+.main .contacts .content-contacts .input-email::placeholder,
+.main .contacts .content-contacts .input-tel::placeholder,
+.main .contacts .content-contacts .textarea-message::placeholder {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font3);
+  line-height: 40px;
+  color: var(--color-gold);
+}
+
+.main .contacts .content-contacts .textarea-message {
+  height: 92px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--color-gold);
+  padding-left: 20px;
+  margin-bottom: 30px;
+  resize: none;
+}
+
+.main .contacts .content-contacts .btn-contacts {
+  border: 0;
+  background-color: var(--color-gold);
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font3);
+  line-height: 40px;
+  text-align: center;
+  width: 220px;
+  height: 55px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.main .contacts .content-contacts .btn-contacts:hover {
+  color: #ffffff;
+}
 /*# sourceMappingURL=style.css.map */

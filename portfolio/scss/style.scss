@@ -345,4 +345,62 @@ body {
       }
     }
   }
+  .contacts {
+    background: url("../assets/img/contacts-img.jpg");
+    background-position: center center;
+    height: 700px;
+    display: flex;
+    justify-content: end;
+    padding-right: 20px;
+    .content-contacts {
+      display: flex;
+      flex-direction: column;
+      width: 450px;
+      height: 445px;
+      margin-top: 60px;
+      .title-contacts {
+        font-family: "Merriweather", serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: var(--font2);
+        line-height: 80px;
+        color: var(--color-gold);
+        margin: 0;
+        margin-bottom: 40px;
+      }
+      .input-email,
+      .input-tel {
+        height: 44px;
+        background: rgba(0, 0, 0, 0.5);
+        border: 2px solid var(--color-gold);
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+      .input-email::placeholder,
+      .input-tel::placeholder,
+      .textarea-message::placeholder {
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: var(--font3);
+        line-height: 40px;
+        color: var(--color-gold);
+      }
+      .textarea-message {
+        height: 92px;
+        background: rgba(0, 0, 0, 0.5);
+        border: 2px solid var(--color-gold);
+        padding-left: 20px;
+        margin-bottom: 30px;
+        resize: none;
+      }
+      .btn-contacts {
+        @include btn-gold;
+        transition: 1s;
+      }
+      .btn-contacts:hover {
+        color: #ffffff;
+      }
+    }
+  }
 }
