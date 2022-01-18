@@ -10,10 +10,9 @@ body {
   background-color: #000000;
 }
 .container {
-  /*width: 1440px; */
-  margin: 0 auto;
   max-width: 1440px;
   width: 100%;
+  margin: 0 auto;
 }
 .center {
   max-width: 1400px;
@@ -162,8 +161,7 @@ body {
     height: 820px;
     margin-bottom: 100px;
     .content-hero {
-      width: 500px;
-      height: 330px;
+      width: 34.7%;
       padding-top: 160px;
       padding-left: 80px;
       .photographer {
@@ -206,8 +204,7 @@ body {
       .item-skills {
         background-position: center top;
         background-repeat: no-repeat;
-        height: 240px;
-        width: 320px;
+        width: 22.85%;
         .title-skills {
           margin-top: 100px;
           font-family: "Inter", sans-serif;
@@ -254,6 +251,7 @@ body {
     }
     .group-btn {
       display: flex;
+      flex-wrap: wrap;
       gap: 5px;
       justify-content: center;
       margin-bottom: 60px;
@@ -276,11 +274,11 @@ body {
       flex-wrap: wrap;
       margin-bottom: 100px;
       .item-portfolio {
-        width: 450px;
+        width: 32%;
         height: 560px;
-        img {
+        /* img {
           @include images;
-        }
+        } */
       }
     }
   }
@@ -379,7 +377,6 @@ body {
       display: flex;
       flex-direction: column;
       width: 450px;
-      height: 445px;
       margin-top: 60px;
       .title-contacts {
         font-family: "Merriweather", serif;
@@ -538,4 +535,133 @@ body {
       }
     }
   }
+}
+
+#burger {
+  //display: none;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+#burger i {
+  //display: none;
+  width: 24px;
+  height: 3px;
+  margin: 3px;
+  background-color: #ffffff;
+}
+
+/*Media */
+@media screen and (max-width: 1440px) {
+  .center {
+    width: 90%;
+  }
+  .main .portfolio .container-imgs .item-portfolio {
+    width: 50%;
+    margin-bottom: 25px;
+  }
+  .main .portfolio .container-imgs {
+    gap: 0;
+    text-align: center;
+  }
+  .main .contacts {
+    padding-right: 5%;
+  }
+  .main .video .video-player.center {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 1024px) {
+  .main .skills .skills-container .item-skills {
+    width: 39%;
+  }
+  .main .skills .skills-container .item-skills:nth-child(1),
+  .main .skills .skills-container .item-skills:nth-child(2) {
+    margin-bottom: 36px;
+  }
+  .main .portfolio .container-imgs .item-portfolio {
+    width: 100%;
+  }
+  .main .portfolio .container-imgs .item-portfolio:nth-child(6) {
+    margin-bottom: 0;
+  }
+  .main .price .cards-price {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .main .price .cards-price .item-price {
+    width: 54%;
+  }
+  .main .contacts {
+    padding: 0;
+    justify-content: center;
+  }
+  .main .contacts .content-contacts .btn-contacts,
+  .main .contacts .content-contacts .title-contacts {
+    align-self: center;
+  }
+  .footer .content-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .content-footer .left-content-footer .link-github .item-link-github,
+  .footer .content-footer .center-content-footer {
+    line-height: 24px;
+  }
+  .footer .content-footer .left-content-footer {
+    margin-bottom: 16px;
+  }
+  .footer .content-footer .center-content-footer {
+    margin-bottom: 20px;
+  }
+  .footer .content-footer .social-list {
+    padding: 9px 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .center {
+    width: 100%;
+  }
+  .header {
+    display: flex;
+    background-size: cover;
+  }
+  .header .info-header .nav {
+    display: none;
+  }
+  .header .info-header .logo {
+    margin-left: 60px;
+  }
+  .main .hero {
+    height: 500px;
+    background-size: contain;
+  }
+  .main .hero .content-hero {
+    width: 100%;
+    padding-top: 78px;
+    padding-left: 60px;
+  }
+  .main .hero .content-hero .photographer {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 64px;
+  }
+  .main .hero .content-hero .text-hero {
+    line-height: 24px;
+    width: 51%;
+    margin: 20px 0 60px 0;
+  }
+}
+@media screen and (max-width: 600px) {
+}
+@media screen and (max-width: 425px) {
+}
+@media screen and (max-width: 375px) {
+}
+@media screen and (max-width: 320px) {
 }
