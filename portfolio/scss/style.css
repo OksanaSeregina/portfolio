@@ -1051,4 +1051,64 @@ body {
             justify-content: end;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .center {
+    width: 90%;
+  }
+  .header {
+    background-size: cover;
+  }
+  .main .skills .skills-container .item-skills {
+    width: 100%;
+    margin: 0;
+  }
+  .main .skills .skills-container .item-skills:nth-child(odd),
+  .main .skills .skills-container .item-skills:nth-child(even) {
+    margin: 0;
+    margin-bottom: 90px;
+  }
+  .main .skills .skills-container .item-skills .description-skills {
+    width: 46.7%;
+    margin: 0 auto;
+  }
+  .main .skills .skills-container .item-skills:last-child .description-skills {
+    margin: 0 auto;
+  }
+  .main .skills .skills-container {
+    margin-bottom: 65px;
+  }
+  .main .contacts .content-contacts {
+    width: 74%;
+  }
+  .footer .content-footer .social-list {
+    width: initial;
+  }
+  .main .price .cards-price .item-price {
+    width: 100%;
+  }
+  .main .contacts {
+    background-size: cover;
+    background-position: -228px;
+  }
+  .main .portfolio .container-imgs .item-portfolio {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main .skills .skills-container .item-skills .description-skills {
+    width: 80%;
+  }
+  .main .video .video-player {
+    background-size: cover;
+    background-position: -100px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .main .portfolio .title span {
+    padding: 0;
+  }
+}
 /*# sourceMappingURL=style.css.map */
