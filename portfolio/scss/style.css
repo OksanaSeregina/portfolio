@@ -838,7 +838,7 @@ body {
   }
   .main .skills .skills-container .item-skills:nth-child(1),
   .main .skills .skills-container .item-skills:nth-child(2) {
-    margin-bottom: 36px;
+    margin-bottom: 71px;
   }
   .main .portfolio .container-imgs .item-portfolio {
     width: 100%;
@@ -893,6 +893,9 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  :root {
+    --font2: 32px;
+  }
   .center {
     width: 100%;
   }
@@ -900,7 +903,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-size: cover;
+    background: url(../assets/img/bg2.jpg);
   }
   .header .info-header .nav {
     display: none;
@@ -909,11 +912,13 @@ body {
     margin-left: 60px;
   }
   .main .hero {
+    background-image: url(../assets/img/bg2.jpg);
     height: 500px;
-    background-size: contain;
   }
   .main .hero .content-hero {
-    width: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     padding-top: 78px;
     padding-left: 60px;
   }
@@ -924,8 +929,126 @@ body {
   }
   .main .hero .content-hero .text-hero {
     line-height: 24px;
-    width: 51%;
+    width: 55%;
     margin: 20px 0 60px 0;
+  }
+  .main .portfolio .container-imgs {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 78px;
+  }
+  .main .portfolio .container-imgs .item-portfolio {
+    width: initial;
+  }
+  .main .portfolio .container-imgs .item-portfolio img {
+    width: 100%;
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .main .skills .title span {
+    line-height: 40px;
+  }
+  .main .skills .title {
+    width: 47.612%;
+    margin-bottom: 66px;
+  }
+  .main .skills .title span:before,
+  .main .portfolio .title span:before {
+    margin-left: -106%;
+  }
+  .main .skills .title span:after,
+  .main .portfolio .title span:after,
+  .main .video .title span:after,
+  .main .price .title span:after {
+    margin-left: 6%;
+  }
+  .main .skills .skills-container .item-skills:nth-child(odd) {
+    margin-left: 60px;
+  }
+  .main .skills .skills-container .item-skills:nth-child(even) {
+    margin-right: 64px;
+  }
+  .main .skills .skills-container .item-skills .title-skills {
+    margin-top: 80px;
+  }
+  .main .skills .skills-container .item-skills .description-skills {
+    line-height: 22px;
+    margin: 0 10px 4px 10px;
+  }
+  .main .skills .skills-container .item-skills:last-child .description-skills {
+    margin: 0 15px;
+  }
+  .main .skills .skills-container {
+    margin-bottom: 155px;
+  }
+  .main .portfolio .title,
+  .main .video .title,
+  .main .price .title {
+    width: 47.612%;
+    margin-bottom: 52px;
+  }
+  .main .portfolio .group-btn {
+    width: 58%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+  }
+  .main .video .title span:before,
+  .main .price .title span:before {
+    margin-left: -105%;
+  }
+  .main .video .video-player .btn-play {
+    width: 75px;
+    height: 75px;
+  }
+  .main .video .video-player img {
+    display: none;
+  }
+  .main .video .video-player {
+    background-image: url(../assets/img/video-player1.jpg);
+    background-repeat: no-repeat;
+    height: 418px;
+    margin-bottom: 78px;
+  }
+  .main .price .cards-price .item-price {
+    width: 43.6%;
+  }
+  .main .price .cards-price {
+    gap: 50px;
+    margin-bottom: 80px;
+  }
+  .main .price .cards-price .item-price .btn-price {
+    width: 220px;
+  }
+  .main .contacts {
+    height: 600px;
+    background-size: cover;
+  }
+  .main .contacts .content-contacts .title-contacts {
+    line-height: 64px;
+  }
+  .footer {
+    height: 190px;
+  }
+  .footer .content-footer .center-content-footer {
+    margin-left: 0;
+  }
+  .footer
+.content-footer
+.left-content-footer
+.link-github
+.item-link-github:last-child {
+    margin-right: 0;
+  }
+  .footer .content-footer .left-content-footer .link-github .item-link-github {
+    margin-right: 26px;
+  }
+  .footer .content-footer .social-list {
+    width: 24%;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
   }
 }
 /*# sourceMappingURL=style.css.map */
