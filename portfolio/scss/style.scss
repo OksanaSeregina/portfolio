@@ -146,8 +146,13 @@ body {
       text-align: center;
       color: #ffffff;
       text-decoration: none;
-      span {
+      .en {
         color: var(--color-gold);
+      }
+    }
+    .navbar {
+      .nav-list {
+        display: none;
       }
     }
   }
@@ -623,6 +628,90 @@ body {
   .header .info-header .logo {
     margin-left: 60px;
   }
+  .header .info-header {
+    justify-content: space-between;
+  }
+  .header .info-header .language {
+    margin-right: 17.8%;
+    width: auto;
+  }
+  .header .info-header .language .ru {
+    margin-left: 12px;
+  }
+
+  .navbar {
+    width: 620px;
+    min-height: 100vh;
+    z-index: 1;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    right: -620px;
+    display: flex;
+    transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+  }
+
+  .change {
+    right: 0;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+    transition: 1s;
+  }
+
+  .hamburger-menu {
+    width: 50px;
+    height: 31px;
+    top: 2.5%;
+    right: 8.3%;
+    position: fixed;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    transition: all 0.8s;
+  }
+
+  .change .line-1 {
+    transform: rotateZ(-405deg) translate(-8px, 6px);
+  }
+
+  .change .line-2 {
+    opacity: 0;
+  }
+
+  .change .line-3 {
+    transform: rotateZ(405deg) translate(-8px, -6px);
+  }
+
+  .header .info-header .navbar .nav-list {
+    display: block;
+    margin: 0px;
+    margin-top: 19%;
+    padding: 0;
+    margin-left: 21%;
+  }
+
+  .nav-item {
+    list-style: none;
+    margin: 16px 0;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 73px;
+    color: #ffffff;
+    position: relative;
+    padding: 3px 0;
+  }
   .main .hero {
     background-image: url(../assets/img/bg2.jpg);
     height: 500px;
@@ -766,6 +855,18 @@ body {
   .header .info-header .logo {
     margin-left: 0;
   }
+  .hamburger-menu {
+    right: 5.3%;
+    width: 40px;
+  }
+  .navbar {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .info-header .navbar .nav-list {
+    margin: 0;
+  }
   .main .hero {
     text-align: center;
     background-position-x: right;
@@ -830,6 +931,9 @@ body {
   }
 }
 @media screen and (max-width: 375px) {
+  .hamburger-menu {
+    width: 30px;
+  }
 }
 @media screen and (max-width: 320px) {
   .main .portfolio .title span {

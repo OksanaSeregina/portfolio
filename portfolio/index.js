@@ -34,3 +34,19 @@ console.log(`1.Вёрстка валидная +10
     обязательное требование к интерактивности: плавное изменение внешнего вида элемента при наведении и клике не влияющее на соседние элементы +5
     
     Итого: 110`);
+
+const menuIcon = document.querySelector(".hamburger-menu");
+const navbar = document.querySelector(".navbar");
+const navList = document.getElementsByClassName("nav-list")[1];
+
+menuIcon.addEventListener("click", () => {
+  navbar.classList.toggle("change");
+});
+
+function closeMenu(event) {
+  if (event.target.classList.contains("nav-link")) {
+    navbar.classList.remove("change");
+  }
+}
+
+navList.addEventListener("click", closeMenu);
