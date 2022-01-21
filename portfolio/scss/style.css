@@ -801,7 +801,7 @@ body {
 }
 
 /*Media */
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1400px) {
   .center {
     width: 90%;
   }
@@ -821,6 +821,19 @@ body {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .main .price .cards-price {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main .price .cards-price .item-price {
+    width: 54%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .main .skills .skills-container .item-skills {
     width: 39%;
@@ -834,16 +847,6 @@ body {
   }
   .main .portfolio .container-imgs .item-portfolio:nth-child(6) {
     margin-bottom: 0;
-  }
-  .main .price .cards-price {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .main .price .cards-price .item-price {
-    width: 54%;
   }
   .main .contacts {
     padding: 0;
@@ -887,6 +890,9 @@ body {
   }
   .center {
     width: 100%;
+  }
+  .hide {
+    display: none !important;
   }
   .header {
     display: -webkit-box;
@@ -938,7 +944,7 @@ body {
   .hamburger-menu {
     width: 50px;
     height: 31px;
-    top: 2.5%;
+    top: 30px;
     right: 8.3%;
     position: fixed;
     cursor: pointer;
@@ -951,6 +957,10 @@ body {
             flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+  .hamburger-menu:hover {
+    -webkit-filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+            filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
   }
   .line {
     width: 100%;
@@ -975,7 +985,7 @@ body {
     margin: 0px;
     margin-top: 19%;
     padding: 0;
-    margin-left: 21%;
+    margin-left: 20.4%;
   }
   .nav-item {
     list-style: none;
@@ -991,6 +1001,11 @@ body {
     color: #ffffff;
     position: relative;
     padding: 3px 0;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .nav-link:hover {
+    color: var(--color-gold);
   }
   .main .hero {
     background-image: url(../assets/img/bg2.jpg);
