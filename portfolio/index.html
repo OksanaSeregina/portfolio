@@ -176,9 +176,31 @@
       <section class="video" id="video">
         <h2 class="title"><span data-i18="video">Video</span></h2>
         <div class="video-player center">
-          <img src="./assets/img/video-player.jpg" alt="video-player" />
+          <video class="view-video" src="./assets/video/video.mp4"></video>
           <button class="btn-play"></button>
+          <div class="controls">
+            <div class="icon-controls play"></div>
+            <input
+              type="range"
+              class="progress"
+              value="40"
+              min="0"
+              max="100"
+              step="1"
+            />
+            <div class="icon-controls volum-on"></div>
+            <input
+              type="range"
+              class="volume"
+              value="40"
+              min="0"
+              max="100"
+              step="1"
+            />
+          </div>
         </div>
+
+        <!-- <div class="screensaver"></div> -->
       </section>
       <section class="price" id="price">
         <h2 class="title"><span data-i18="price">Price</span></h2>

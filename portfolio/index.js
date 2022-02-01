@@ -239,3 +239,68 @@ function getLocalStorage() {
   }
 }
 window.addEventListener("load", getLocalStorage);
+
+//Custom video
+const progress = document.querySelector(".progress");
+const volume = document.querySelector(".volume");
+
+function updateControls() {
+  const value = this.value;
+  this.style.background = `linear-gradient(to right, rgb(189, 174, 130) 0%, rgb(189, 174, 130) ${value}%, rgb(200, 200, 200) ${value}%, rgb(200, 200, 200) 100%)`;
+}
+
+progress.addEventListener("input", updateControls);
+volume.addEventListener("input", updateControls);
+
+const player = document.querySelector(".video-player");
+
+/* // Select the HTML5 video
+const video = document.querySelector("#video");
+// set the pause button to display:none by default
+document.querySelector(".fa-pause").style.display = "none";
+// update the progress bar
+video.addEventListener("timeupdate", () => {
+  let curr = (video.currentTime / video.duration) * 100;
+  if (video.ended) {
+    document.querySelector(".fa-play").style.display = "block";
+    document.querySelector(".fa-pause").style.display = "none";
+  }
+  document.querySelector(".inner").style.width = `${curr}%`;
+});
+// pause or play the video
+const play = (e) => {
+  // Condition when to play a video
+  if (video.paused) {
+    document.querySelector(".fa-play").style.display = "none";
+    document.querySelector(".fa-pause").style.display = "block";
+    video.play();
+  } else {
+    document.querySelector(".fa-play").style.display = "block";
+    document.querySelector(".fa-pause").style.display = "none";
+    //video.pause();
+  }
+};
+// trigger fullscreen
+const fullScreen = (e) => {
+  e.preventDefault();
+  video.requestFullscreen();
+};
+// download the video
+const download = (e) => {
+  e.preventDefault();
+  let a = document.createElement("a");
+  a.href = video.src;
+  a.target = "_blank";
+  a.download = "";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+};
+// rewind the current time
+const rewind = (e) => {
+  video.currentTime = video.currentTime - (video.duration / 100) * 5;
+};
+// forward the current time
+const forward = (e) => {
+  video.currentTime = video.currentTime + (video.duration / 100) * 5;
+}; */
