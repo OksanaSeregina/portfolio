@@ -1,9 +1,12 @@
-console.log(`1.Смена изображений в секции portfolio +25
-2.Перевод страницы на два языка +25
-3.Переключение светлой и тёмной темы +25
-4.Дополнительный функционал: выбранный пользователем язык отображения страницы и светлая или тёмная тема сохраняются при перезагрузке страницы +5
-5.Дополнительный функционал: сложные эффекты для кнопок при наведении (выбран из предложенных эффектов) +5
-Итого: 85`);
+console.log(`1.Вёрстка +10
+2.Кнопка Play/Pause на панели управления +10
+3.Прогресс-бар отображает прогресс проигрывания видео. При перемещении ползунка прогресс-бара вручную меняется текущее время проигрывания видео. Разный цвет прогресс-бара до и после ползунка +10
+4.При перемещении ползунка регулятора громкости звука можно сделать звук громче или тише. Разный цвет регулятора громкости звука до и после ползунка +10
+5.При клике по кнопке Volume/Mute можно включить или отключить звук. Одновременно с включением/выключением звука меняется внешний вид кнопки. Также внешний вид кнопки меняется, если звук включают или выключают перетягиванием регулятора громкости звука от нуля или до нуля +10
+6.Кнопка Play/Pause в центре видео +10
+
+
+Итого: 60`);
 
 const i18Obj = {
   en: {
@@ -241,66 +244,87 @@ function getLocalStorage() {
 window.addEventListener("load", getLocalStorage);
 
 //Custom video
-const progress = document.querySelector(".progress");
-const volume = document.querySelector(".volume");
+const video = document.querySelector(".viewer");
+const btnPlay = document.querySelector(".btn-play");
+const play = document.querySelector(".play");
+const progressControls = document.querySelector(".progress");
+const volumOn = document.querySelector(".volum-on");
+const volumeControls = document.querySelector(".volume");
+const screensaver = document.querySelector(".screensaver");
+
+function tooglePlay() {
+  if (video.paused) {
+    screensaver.style.display = "none";
+    video.play();
+    play.classList.add("pause");
+    btnPlay.style.display = "none";
+  } else {
+    video.pause();
+    play.classList.remove("pause");
+    btnPlay.style.display = "inline-block";
+  }
+}
+
+function handleProgressBar() {
+  const percent = (video.currentTime / video.duration) * 100;
+  progressControls.style.background = `linear-gradient(to right, var(--color-gold) 0%, var(--color-gold) ${percent}%, #fff ${percent}%, #fff 100%)`;
+  endedTime();
+}
+
+function slidingProgress() {
+  progressControls.value =
+    (video.currentTime / video.duration) * progressControls.max;
+  handleProgressBar();
+}
+
+const scrub = (e) => {
+  const time = (e.offsetX / progressControls.offsetWidth) * video.duration;
+  video.currentTime = time;
+};
+
+function endedTime() {
+  if (video.ended) {
+    video.currentTime = 0;
+    play.classList.remove("pause");
+    btnPlay.style.display = "inline-block";
+  }
+}
 
 function updateControls() {
   const value = this.value;
   this.style.background = `linear-gradient(to right, rgb(189, 174, 130) 0%, rgb(189, 174, 130) ${value}%, rgb(200, 200, 200) ${value}%, rgb(200, 200, 200) 100%)`;
 }
 
-progress.addEventListener("input", updateControls);
-volume.addEventListener("input", updateControls);
-
-const player = document.querySelector(".video-player");
-
-/* // Select the HTML5 video
-const video = document.querySelector("#video");
-// set the pause button to display:none by default
-document.querySelector(".fa-pause").style.display = "none";
-// update the progress bar
-video.addEventListener("timeupdate", () => {
-  let curr = (video.currentTime / video.duration) * 100;
-  if (video.ended) {
-    document.querySelector(".fa-play").style.display = "block";
-    document.querySelector(".fa-pause").style.display = "none";
-  }
-  document.querySelector(".inner").style.width = `${curr}%`;
-});
-// pause or play the video
-const play = (e) => {
-  // Condition when to play a video
-  if (video.paused) {
-    document.querySelector(".fa-play").style.display = "none";
-    document.querySelector(".fa-pause").style.display = "block";
-    video.play();
+function handleRangeUpdate() {
+  video.volume = volumeControls.value / 100;
+  if (video.volume === 0) {
+    volumOn.classList.add("volum-off");
   } else {
-    document.querySelector(".fa-play").style.display = "block";
-    document.querySelector(".fa-pause").style.display = "none";
-    //video.pause();
+    volumOn.classList.remove("volum-off");
   }
-};
-// trigger fullscreen
-const fullScreen = (e) => {
-  e.preventDefault();
-  video.requestFullscreen();
-};
-// download the video
-const download = (e) => {
-  e.preventDefault();
-  let a = document.createElement("a");
-  a.href = video.src;
-  a.target = "_blank";
-  a.download = "";
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-};
-// rewind the current time
-const rewind = (e) => {
-  video.currentTime = video.currentTime - (video.duration / 100) * 5;
-};
-// forward the current time
-const forward = (e) => {
-  video.currentTime = video.currentTime + (video.duration / 100) * 5;
-}; */
+  console.log(video.volume);
+}
+
+function toogleMute() {
+  volumOn.classList.toggle("volum-off");
+  if (volumOn.classList.contains("volum-off")) {
+    video.volume = 0;
+  } else {
+    video.volume = volumeControls.value / 100;
+  }
+  if (video.volume === 0) {
+    volumOn.classList.add("volum-off");
+  }
+}
+
+play.addEventListener("click", tooglePlay);
+video.addEventListener("click", tooglePlay);
+btnPlay.addEventListener("click", tooglePlay);
+screensaver.addEventListener("click", tooglePlay);
+video.addEventListener("timeupdate", handleProgressBar);
+video.addEventListener("timeupdate", slidingProgress);
+video.addEventListener("change", slidingProgress);
+progressControls.addEventListener("click", scrub);
+volumeControls.addEventListener("input", updateControls);
+volumeControls.addEventListener("change", handleRangeUpdate);
+volumOn.addEventListener("click", toogleMute);
