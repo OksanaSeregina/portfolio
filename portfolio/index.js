@@ -325,6 +325,7 @@ video.addEventListener("timeupdate", handleProgressBar);
 video.addEventListener("timeupdate", slidingProgress);
 video.addEventListener("change", slidingProgress);
 progressControls.addEventListener("click", scrub);
+progressControls.addEventListener("input", updateControls);
 volumeControls.addEventListener("input", updateControls);
 volumeControls.addEventListener("change", handleRangeUpdate);
 volumOn.addEventListener("click", toogleMute);
