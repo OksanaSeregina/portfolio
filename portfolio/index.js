@@ -4,6 +4,7 @@ console.log(`1.Вёрстка +10
 4.При перемещении ползунка регулятора громкости звука можно сделать звук громче или тише. Разный цвет регулятора громкости звука до и после ползунка +10
 5.При клике по кнопке Volume/Mute можно включить или отключить звук. Одновременно с включением/выключением звука меняется внешний вид кнопки. Также внешний вид кнопки меняется, если звук включают или выключают перетягиванием регулятора громкости звука от нуля или до нуля +10
 6.Кнопка Play/Pause в центре видео +10
+7.Дополнительный не предусмотренный в задании функционал (ТЕКУЩЕЕ ВРЕМЯ ПРОИГРЫВАНИЯ)
 
 
 Итого: 60`);
@@ -247,6 +248,8 @@ window.addEventListener("load", getLocalStorage);
 const video = document.querySelector(".viewer");
 const btnPlay = document.querySelector(".btn-play");
 const play = document.querySelector(".play");
+var currTime = document.querySelector(".current-time");
+var durationTime = document.querySelector(".duration-time");
 const progressControls = document.querySelector(".progress");
 const volumOn = document.querySelector(".volum-on");
 const volumeControls = document.querySelector(".volume");
@@ -263,6 +266,31 @@ function tooglePlay() {
     play.classList.remove("pause");
     btnPlay.style.display = "inline-block";
   }
+}
+
+function videoTime(time) {
+  time = Math.floor(time);
+  let minutes = Math.floor(time / 60);
+  let seconds = Math.floor(time - minutes * 60);
+  let minutesVal = minutes;
+  let secondsVal = seconds;
+  if (minutes < 10) {
+    minutesVal = `0${minutes}`;
+  }
+  if (seconds < 10) {
+    secondsVal = `0${seconds}`;
+  }
+  return `${minutesVal}:${secondsVal}`;
+}
+function videoProgressTime() {
+  progress = Math.floor(video.currentTime) / (Math.floor(video.duration) / 100);
+  progressControls.value = progress;
+  currTime.innerHTML = videoTime(video.currentTime);
+}
+
+function playbackTime() {
+  let timeDurution = videoTime(video.duration);
+  durationTime.innerHTML = timeDurution;
 }
 
 function handleProgressBar() {
@@ -302,7 +330,6 @@ function handleRangeUpdate() {
   } else {
     volumOn.classList.remove("volum-off");
   }
-  console.log(video.volume);
 }
 
 function toogleMute() {
@@ -324,8 +351,17 @@ screensaver.addEventListener("click", tooglePlay);
 video.addEventListener("timeupdate", handleProgressBar);
 video.addEventListener("timeupdate", slidingProgress);
 video.addEventListener("change", slidingProgress);
+video.addEventListener("timeupdate", videoProgressTime);
+video.addEventListener("loadedmetadata", playbackTime);
 progressControls.addEventListener("click", scrub);
 progressControls.addEventListener("input", updateControls);
 volumeControls.addEventListener("input", updateControls);
-volumeControls.addEventListener("change", handleRangeUpdate);
 volumOn.addEventListener("click", toogleMute);
+volumeControls.addEventListener("input", handleRangeUpdate);
+
+/* function videoChangeTime(e) {
+  //Перематываем
+  var mouseX = Math.floor(e.pageX - progressControls.offsetLeft);
+  var progress = mouseX / (progressControls.offsetWidth / 100);
+  video.currentTime = video.duration * (progress / 100);
+} */

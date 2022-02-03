@@ -680,6 +680,7 @@ body {
 }
 
 .main .video .video-player .controls {
+  color: #ffffff;
   background-color: #000000;
   width: calc(100% - 4px);
   height: 60px;
@@ -701,7 +702,7 @@ body {
   background-position: center center;
   margin: 9px 0;
   cursor: pointer;
-  width: 50px;
+  width: 40px;
   height: 40px;
   -webkit-transition: 1s;
   transition: 1s;
@@ -1402,6 +1403,13 @@ body {
   .main .skills .skills-container .item-skills:nth-child(2) {
     margin-bottom: 71px;
   }
+  .main .video .video-player .controls .progress {
+    height: 7px;
+    width: 50%;
+  }
+  .main .video .video-player .controls .volume {
+    height: 7px;
+  }
   .main .portfolio .container-imgs .item-portfolio {
     width: 100%;
   }
@@ -1691,7 +1699,7 @@ body {
     border: none;
   }
   .main .video .video-player .controls .volume {
-    width: 70%;
+    width: 65%;
     border: none;
   }
   .main .price .cards-price .item-price {
@@ -1794,6 +1802,17 @@ body {
   .main .video .video-player.center {
     width: 90%;
   }
+  .main .video .video-player .controls {
+    height: auto;
+    padding-top: 0;
+  }
+  .main .video .video-player .controls .icon-controls {
+    width: 25px;
+    height: 25px;
+  }
+  .main .video .video-player .controls .volume {
+    width: 55%;
+  }
   .main .video .video-player .controls .volume,
   .main .video .video-player .controls .progress {
     height: 7px;
@@ -1841,13 +1860,14 @@ body {
   }
   .main .video .video-player .controls {
     padding-top: 0;
+    font-size: 10px;
+  }
+  .main .video .video-player .controls .volume,
+  .main .video .video-player .controls .progress {
+    height: 5px;
   }
   .main .video .video-player .controls .volume {
     width: 50%;
-  }
-  .main .video .video-player .controls .icon-controls {
-    width: 30px;
-    height: 30px;
   }
 }
 
@@ -1863,6 +1883,10 @@ body {
 @media screen and (max-width: 320px) {
   .main .portfolio .title span {
     padding: 0;
+  }
+  .main .video .video-player .controls .icon-controls {
+    width: 20px;
+    height: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
