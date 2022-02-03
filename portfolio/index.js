@@ -358,10 +358,3 @@ progressControls.addEventListener("input", updateControls);
 volumeControls.addEventListener("input", updateControls);
 volumOn.addEventListener("click", toogleMute);
 volumeControls.addEventListener("input", handleRangeUpdate);
-
-/* function videoChangeTime(e) {
-  //Перематываем
-  var mouseX = Math.floor(e.pageX - progressControls.offsetLeft);
-  var progress = mouseX / (progressControls.offsetWidth / 100);
-  video.currentTime = video.duration * (progress / 100);
-} */
